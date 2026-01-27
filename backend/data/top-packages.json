@@ -1,0 +1,8 @@
+[
+  "express",
+  "react",
+  "lodash",
+  "request",
+  "paypal-sdk",
+  "axios"
+]
