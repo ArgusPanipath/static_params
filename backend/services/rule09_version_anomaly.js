@@ -3,6 +3,8 @@
  * Priority: LOW–MEDIUM
  */
 
+const fetch = require("node-fetch");
+
 module.exports = {
     ruleId: 9,
     severity: "MEDIUM",
