@@ -27,7 +27,9 @@ POST /api/analyze
 GET /api/analyze/rules
 GET /api/rules
 POST /api/rules/:ruleId
+
 Examples
+
 1) Analyze all rules (upload mode)
 curl -s -X POST http://localhost:5050/api/analyze \
   -H "Content-Type: application/json" \
@@ -36,6 +38,7 @@ curl -s -X POST http://localhost:5050/api/analyze \
     "files":[{"path":"index.js","content":"const x=\"QWxhZGRpbjpvcGVuIHNlc2FtZQ==\";"}],
     "packageJson":{"name":"express","version":"1.0.0"}
   }'
+
 2) Analyze quick (static-only)
 curl -s -X POST http://localhost:5050/api/analyze \
   -H "Content-Type: application/json" \
@@ -44,6 +47,7 @@ curl -s -X POST http://localhost:5050/api/analyze \
     "files":[{"path":"index.js","content":"console.log(\"hello\")"}],
     "packageJson":{"name":"express","version":"1.0.0"}
   }'
+
 3) Run a single rule (Entropy)
 curl -s -X POST http://localhost:5050/api/rules/1 \
   -H "Content-Type: application/json" \
@@ -51,6 +55,7 @@ curl -s -X POST http://localhost:5050/api/rules/1 \
     "files":[{"path":"index.js","content":"const x=\"QWxhZGRpbjpvcGVuIHNlc2FtZQ==\";"}],
     "packageJson":{"name":"demo-pkg","version":"1.0.0"}
   }'
+
 4) List rules
 curl -s http://localhost:5050/api/analyze/rules
 Notes
@@ -61,4 +66,5 @@ Tests (optional)
 npm test
 
 If you want it placed in a different path or want to add scr
+
 
